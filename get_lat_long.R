@@ -116,22 +116,6 @@ if (str_detect(input_ll_type, 'poly')) {
   mpoint_list <- c()
   
   for (input in input_list) {
-    # # replace spaces with '%20'
-    # input <- input %>% str_replace_all(string=., ' ', '%20')
-    # 
-    # # concat to get final query url
-    # place <- paste(c('["place"="',str_to_lower(input_type),'"];'), collapse='')
-    # node <- paste(c('node[name="', input, '"]'), collapse='')
-    # 
-    # base_url <- 'https://www.overpass-api.de/api/interpreter?data=[out:json];'
-    # query_url <- paste(c(base_url, node, place, 'out;'), collapse='')
-    # 
-    # # extract info from Overpass API
-    # res_json <- fromJSON(query_url)
-    # # info from first result
-    # long <- res_json$elements$lon[1]
-    # lat <- res_json$elements$lat[1]
-    
     # replace spaces with '+'
     input <- input %>% str_replace_all(string=., ' ', '+')
     
